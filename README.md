@@ -21,4 +21,4 @@ cd official_second_proyect
 ```python
 pip install -r requirements.txt 
 ```
-
+## Checking for issues regarding pull request
