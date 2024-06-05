@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06ca9c02-2e3d-40ec-9319-208b46abf218" name="Changes" comment="Upload csv: BTC and AAPL.">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technical_analysis/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/technical_analysis/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="06ca9c02-2e3d-40ec-9319-208b46abf218" name="Changes" comment="i just added the requirements.txt with the necessary libraries to run the code and also the code seen in class with the purchase signals" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +24,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.main (1).executor": "Run",
+    "Python.main(1).executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -40,8 +38,8 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.main (1)">
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main(1)">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="official_second_proyect" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -50,8 +48,9 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/technical_analysis" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -64,7 +63,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="main(1)" type="PythonConfigurationType" factoryName="Python">
       <module name="Official_second_proyect" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -73,7 +72,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (Second Proyect)" />
+      <option name="SDK_NAME" value="Python 3.11" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -89,12 +88,12 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.main(1)" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.main (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -118,6 +117,7 @@
       <workItem from="1717525315546" duration="470000" />
       <workItem from="1717525817574" duration="2154000" />
       <workItem from="1717545107010" duration="5442000" />
+      <workItem from="1717618981805" duration="2388000" />
     </task>
     <task id="LOCAL-00001" summary="The respective folders were added to carry out the project.">
       <option name="closed" value="true" />
@@ -175,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717547520614</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="i just added the requirements.txt with the necessary libraries to run the code and also the code seen in class with the purchase signals">
+      <option name="closed" value="true" />
+      <created>1717621130393</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717621130393</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,10 +195,11 @@
     <MESSAGE value="try number 1" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="Upload csv: BTC and AAPL." />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload csv: BTC and AAPL." />
+    <MESSAGE value="i just added the requirements.txt with the necessary libraries to run the code and also the code seen in class with the purchase signals" />
+    <option name="LAST_COMMIT_MESSAGE" value="i just added the requirements.txt with the necessary libraries to run the code and also the code seen in class with the purchase signals" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/official_second_proyect$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1717618936983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/technical_analysis" />
+    <SUITE FILE_PATH="coverage/official_second_proyect$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1717618995278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/technical_analysis" />
     <SUITE FILE_PATH="coverage/Official_second_proyect$main.coverage" NAME="main Coverage Results" MODIFIED="1717525259516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
