@@ -1,4 +1,4 @@
-ximport pandas as pd
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import ta
@@ -178,13 +178,6 @@ def profit(trial):
 study = optuna.create_study(direction='maximize')
 
 study.optimize(func=profit, n_trials=1)
-<<<<<<< HEAD
-#%%
-study.best_params
-# Con un comentario jala parte 2.3 punto 1
-=======
 
 study.best_params
 
->>>>>>> df61e95f3c28d942930fe20a066336f3dcd7993c
-git push
