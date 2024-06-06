@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="06ca9c02-2e3d-40ec-9319-208b46abf218" name="Changes" comment="&#10;I just added the CMF for volume indicators">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="06ca9c02-2e3d-40ec-9319-208b46abf218" name="Changes" comment="i just added the requirements.txt with the necessary libraries to run the code and also the code seen in class with the purchase signals">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/official_second_proyect.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/official_second_proyect.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/technical_analysis/trials.py" beforeDir="false" afterPath="$PROJECT_DIR$/technical_analysis/trials.py" afterDir="false" />
+>>>>>>> 7fe3d2ec0ec5803c43f945a57b418a3430d06a3a
+>>>>>>> 4872fec93886dfad194f6d2fa37346445578e5b1
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +33,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SebastianMG10&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GustavodeAnda/official_second_proyect.git&quot;,
+    &quot;accountId&quot;: &quot;0d68bdaf-ec62-4fc5-9302-4038f4f20d65&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -37,7 +60,12 @@
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+<<<<<<< HEAD
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gustavodeandamadrigal/Library/Mobile Documents/com~apple~CloudDocs/1.- ITESO/7.- Verano ITESO ING FIN/TRADING/official_second_proyect&quot;,
+=======
     &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/Music/Traiding/1er proyecto/official_second_proyect&quot;,
+>>>>>>> 7fe3d2ec0ec5803c43f945a57b418a3430d06a3a
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -125,8 +153,20 @@
       <workItem from="1717525817574" duration="2154000" />
       <workItem from="1717545107010" duration="5442000" />
       <workItem from="1717618981805" duration="2388000" />
+<<<<<<< HEAD
+      <workItem from="1717630167818" duration="338000" />
+      <workItem from="1717630725712" duration="1223000" />
+      <workItem from="1717633110803" duration="193000" />
+      <workItem from="1717715325815" duration="868000" />
+      <workItem from="1717716365375" duration="426000" />
+=======
       <workItem from="1717693807729" duration="1310000" />
+<<<<<<< HEAD
       <workItem from="1717714453042" duration="2347000" />
+=======
+      <workItem from="1717714453042" duration="325000" />
+>>>>>>> 7fe3d2ec0ec5803c43f945a57b418a3430d06a3a
+>>>>>>> 4872fec93886dfad194f6d2fa37346445578e5b1
     </task>
     <task id="LOCAL-00001" summary="The respective folders were added to carry out the project.">
       <option name="closed" value="true" />
@@ -213,6 +253,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="The respective folders were added to carry out the project." />
