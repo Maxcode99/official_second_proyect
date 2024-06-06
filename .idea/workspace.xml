@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06ca9c02-2e3d-40ec-9319-208b46abf218" name="Changes" comment="i just added the requirements.txt with the necessary libraries to run the code and also the code seen in class with the purchase signals">
-      <change beforePath="$PROJECT_DIR$/technical_analysis/trials.py" beforeDir="false" afterPath="$PROJECT_DIR$/technical_analysis/trials.py" afterDir="false" />
+    <list default="true" id="06ca9c02-2e3d-40ec-9319-208b46abf218" name="Changes" comment="&#10;I just added the CMF for volume indicators">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +126,7 @@
       <workItem from="1717545107010" duration="5442000" />
       <workItem from="1717618981805" duration="2388000" />
       <workItem from="1717693807729" duration="1310000" />
-      <workItem from="1717714453042" duration="325000" />
+      <workItem from="1717714453042" duration="2347000" />
     </task>
     <task id="LOCAL-00001" summary="The respective folders were added to carry out the project.">
       <option name="closed" value="true" />
@@ -192,7 +192,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717621130393</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="i just added the requirements.txt with the necessary libraries to run the code and also the code seen in class with the purchase signals">
+      <option name="closed" value="true" />
+      <created>1717714953722</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717714953722</updated>
+    </task>
+    <task id="LOCAL-00010" summary="&#10;I just added the CMF for volume indicators">
+      <option name="closed" value="true" />
+      <created>1717715008717</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717715008717</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +221,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="Upload csv: BTC and AAPL." />
     <MESSAGE value="i just added the requirements.txt with the necessary libraries to run the code and also the code seen in class with the purchase signals" />
-    <option name="LAST_COMMIT_MESSAGE" value="i just added the requirements.txt with the necessary libraries to run the code and also the code seen in class with the purchase signals" />
+    <MESSAGE value="&#10;I just added the CMF for volume indicators" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;I just added the CMF for volume indicators" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/official_second_proyect$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1717618995278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/technical_analysis" />
