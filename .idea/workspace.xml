@@ -5,14 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06ca9c02-2e3d-40ec-9319-208b46abf218" name="Changes" comment="i just added the requirements.txt with the necessary libraries to run the code and also the code seen in class with the purchase signals">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/official_second_proyect.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/official_second_proyect.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/technical_analysis/trials.py" beforeDir="false" afterPath="$PROJECT_DIR$/technical_analysis/trials.py" afterDir="false" />
+>>>>>>> 7fe3d2ec0ec5803c43f945a57b418a3430d06a3a
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,8 +55,12 @@
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+<<<<<<< HEAD
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/gustavodeandamadrigal/Library/Mobile Documents/com~apple~CloudDocs/1.- ITESO/7.- Verano ITESO ING FIN/TRADING/official_second_proyect&quot;,
+=======
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/Music/Traiding/1er proyecto/official_second_proyect&quot;,
+>>>>>>> 7fe3d2ec0ec5803c43f945a57b418a3430d06a3a
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -115,8 +130,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
-        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -133,11 +148,16 @@
       <workItem from="1717525817574" duration="2154000" />
       <workItem from="1717545107010" duration="5442000" />
       <workItem from="1717618981805" duration="2388000" />
+<<<<<<< HEAD
       <workItem from="1717630167818" duration="338000" />
       <workItem from="1717630725712" duration="1223000" />
       <workItem from="1717633110803" duration="193000" />
       <workItem from="1717715325815" duration="868000" />
       <workItem from="1717716365375" duration="426000" />
+=======
+      <workItem from="1717693807729" duration="1310000" />
+      <workItem from="1717714453042" duration="325000" />
+>>>>>>> 7fe3d2ec0ec5803c43f945a57b418a3430d06a3a
     </task>
     <task id="LOCAL-00001" summary="The respective folders were added to carry out the project.">
       <option name="closed" value="true" />
