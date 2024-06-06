@@ -1,18 +1,19 @@
-ximport pandas as pd
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import ta
 
-data = pd.read_csv("./data/aapl_project_train.csv").dropna()
+data = pd.read_csv("../data/aapl_project_train.csv").dropna()
 
 rsi_indicator = ta.momentum.RSIIndicator(close=data.Close, window=48)
 # rsi_indicator_2 = ta.momentum.RSIIndicator(close=data.Close, window=20)
 bollinger = ta.volatility.BollingerBands(data.Close, window=10)
+stochastic_indicator = ta.momentum.StochasticOscillator(high=data.High, low=data.Low, close=data.Close)
 
 technical_data = pd.DataFrame()
 technical_data["Close"] = data.Close
 technical_data["RSI"] = rsi_indicator.rsi()
-# technical_data["RSI2"] = rsi_indicator_2.rsi()
+stochastic_indicator["STOCH"] = stochastic_indicator.stoch()
 technical_data = technical_data.dropna()
 technical_data.head()
 
@@ -178,12 +179,10 @@ def profit(trial):
 study = optuna.create_study(direction='maximize')
 
 study.optimize(func=profit, n_trials=1)
+
+study.best_params
+
 <<<<<<< HEAD
-#%%
-study.best_params
-# Con un comentario jala parte 2.3 punto 1
-=======
-
-study.best_params
-
 >>>>>>> df61e95f3c28d942930fe20a066336f3dcd7993c
+=======
+>>>>>>> 1ea1046794b8d9cb5b169b30e6cfe1a96d6918ca
