@@ -20,7 +20,7 @@ technical_data["%K"] = stochastic_indicator.stoch()
 technical_data["OBV"] = obv.on_balance_volume()
 technical_data = technical_data.dropna()
 
-### Plot
+### Plot L
 fig, axs = plt.subplots(4, 1, figsize=(12, 6))
 axs[0].plot(technical_data["Close"], label="Close")
 axs[1].plot(technical_data["RSI"], label="RSI")
