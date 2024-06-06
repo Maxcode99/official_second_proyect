@@ -178,7 +178,6 @@ def profit(trial):
 study = optuna.create_study(direction='maximize')
 
 study.optimize(func=profit, n_trials=1)
-#%%
+
 study.best_params
-# Con un comentario jala parte 2.3 punto 1
 
