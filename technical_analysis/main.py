@@ -1,4 +1,4 @@
-import pandas as pd
+ximport pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import ta
@@ -181,4 +181,3 @@ study.optimize(func=profit, n_trials=1)
 #%%
 study.best_params
 # Con un comentario jala parte 2.3 punto 1
-
