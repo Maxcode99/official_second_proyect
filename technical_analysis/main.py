@@ -187,4 +187,3 @@ study.best_params
 study.best_params
 
 >>>>>>> df61e95f3c28d942930fe20a066336f3dcd7993c
-git push

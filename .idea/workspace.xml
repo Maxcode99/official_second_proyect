@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06ca9c02-2e3d-40ec-9319-208b46abf218" name="Changes" comment="i just added the requirements.txt with the necessary libraries to run the code and also the code seen in class with the purchase signals">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/official_second_proyect.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/official_second_proyect.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technical_analysis/New_commits.py" beforeDir="false" afterPath="$PROJECT_DIR$/technical_analysis/New_commits.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/technical_analysis/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/technical_analysis/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,8 +95,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main(1)" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.main(1)" />
     </list>
     <recent_temporary>
       <list>
@@ -129,7 +125,7 @@
       <workItem from="1717525817574" duration="2154000" />
       <workItem from="1717545107010" duration="5442000" />
       <workItem from="1717618981805" duration="2388000" />
-      <workItem from="1717693807729" duration="1162000" />
+      <workItem from="1717693807729" duration="1310000" />
     </task>
     <task id="LOCAL-00001" summary="The respective folders were added to carry out the project.">
       <option name="closed" value="true" />
