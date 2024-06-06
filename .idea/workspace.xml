@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06ca9c02-2e3d-40ec-9319-208b46abf218" name="Changes" comment="i just added the requirements.txt with the necessary libraries to run the code and also the code seen in class with the purchase signals">
-      <change beforePath="$PROJECT_DIR$/technical_analysis/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/technical_analysis/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/technical_analysis/trials.py" beforeDir="false" afterPath="$PROJECT_DIR$/technical_analysis/trials.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,8 +95,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main" />
       <item itemvalue="Python.main(1)" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
@@ -126,6 +126,7 @@
       <workItem from="1717545107010" duration="5442000" />
       <workItem from="1717618981805" duration="2388000" />
       <workItem from="1717693807729" duration="1310000" />
+      <workItem from="1717714453042" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="The respective folders were added to carry out the project.">
       <option name="closed" value="true" />
