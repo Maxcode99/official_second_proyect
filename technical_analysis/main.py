@@ -34,7 +34,6 @@ capital = 1_000_000
 n_shares = 127
 stop_loss = 0.1258142736431898
 take_profit = 0.1438947002278296
-
 COM = 0.125 / 100
 
 active_positions = []

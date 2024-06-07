@@ -13,8 +13,8 @@ cd official_second_proyect
 3. Create a virtual environment
 
 ```python
-git clone <repo_url>
-cd official_second_proyect
+python -m venv venv
+source venv/bin/activate  # On Windows use `.venv\Scripts\activate`
 ```
 4. Install the required dependencies
 
