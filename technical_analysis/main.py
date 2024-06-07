@@ -3,27 +3,31 @@ import numpy as np
 import matplotlib.pyplot as plt
 import ta
 
-data = pd.read_csv("../data/aapl_project_train.csv").dropna()
+data = pd.read_csv("./data/aapl_project_train.csv").dropna()
 
 rsi_indicator = ta.momentum.RSIIndicator(close=data.Close, window=48)
-# rsi_indicator_2 = ta.momentum.RSIIndicator(close=data.Close, window=20)
 bollinger = ta.volatility.BollingerBands(data.Close, window=10)
-stochastic_indicator = ta.momentum.StochasticOscillator(high=data.High, low=data.Low, close=data.Close)
+macd = ta.trend.MACD(data.Close, window_slow=26, window_fast=12, window_sign=9)
+atr = ta.volatility.AverageTrueRange(high=data.High, low=data.Low, close=data.Close, window=14)
 
+### DataFrame
 technical_data = pd.DataFrame()
 technical_data["Close"] = data.Close
 technical_data["RSI"] = rsi_indicator.rsi()
-stochastic_indicator["STOCH"] = stochastic_indicator.stoch()
+technical_data["MACD"] = macd.macd()
+technical_data['BOLL'] = bollinger.bollinger_hband() - bollinger.bollinger_lband()
+technical_data["ATR"] = atr.average_true_range()
 technical_data = technical_data.dropna()
-technical_data.head()
 
-fig, axs = plt.subplots(3, 1, figsize=(12, 6))
+### Plot
+fig, axs = plt.subplots(5, 1, figsize=(12, 18))
 axs[0].plot(technical_data["Close"], label="Close")
 axs[1].plot(technical_data["RSI"], label="RSI")
-# axs[2].plot(technical_data["RSI2"], label="RSI2")
-axs[0].legend()
-axs[1].legend()
-# axs[2].legend()
+axs[2].plot(technical_data["MACD"], label="MACD")
+axs[3].plot(technical_data["BOLL"], label="BOLL")
+axs[4].plot(technical_data["ATR"], label="ATR")
+for ax in axs:
+    ax.legend()
 plt.show()
 
 technical_data["BUY_SIGNAL"] = (technical_data.RSI < 31)
@@ -94,7 +98,6 @@ plt.legend()
 plt.show()
 
 ## Short Selling
-
 # Señal de venta basada en el RSI
 technical_data["SELL_SIGNAL"] = (technical_data.RSI > 75) & (technical_data.RSI2 > 75)
 
@@ -164,17 +167,28 @@ plt.show()
 
 import optuna
 
+import optuna
+
+
 def create_signals(data: pd.DataFrame, **kwargs):
     data = data.copy()
+
     rsi_1 = ta.momentum.RSIIndicator(data.Close, kwargs["rsi_window"])
     data["rsi"] = rsi_1.rsi()
 
     bollinger = ta.volatility.BollingerBands(data.Close,
-                                             kwargs["bollinger_window"],
-                                             kwargs["bollinger_std"])
+                                             window=kwargs["bollinger_window"],
+                                             window_dev=kwargs["bollinger_std"])
+
+    macd = ta.trend.MACD(data.Close, window_slow=kwargs["macd_slow_window"],
+                         window_fast=kwargs["macd_fast_window"],
+                         window_sign=kwargs["macd_sign_window"])
+    atr = ta.volatility.AverageTrueRange(high=data.High, low=data.Low, close=data.Close,
+                                         window=kwargs["atr_window"])
 
     data["BUY_SIGNAL"] = (data["rsi"] < kwargs["rsi_lower_threshold"])
     data["BUY_SIGNAL"] = data["BUY_SIGNAL"] & bollinger.bollinger_lband_indicator().astype(bool)
+    data["SELL_SIGNAL"] = (data["rsi"] > kwargs["rsi_lower_threshold"])
     return data.dropna()
 
 
@@ -185,7 +199,6 @@ def profit(trial):
     take_profit = trial.suggest_float("take_profit", 0.05, 0.15)
 
     max_active_operations = 1000
-
     COM = 0.125 / 100
 
     active_positions = []
@@ -193,14 +206,22 @@ def profit(trial):
 
     rsi_window = trial.suggest_int("rsi_window", 5, 50)
     rsi_lower_threshold = trial.suggest_int("rsi_lower_threshold", 10, 30)
-
     bollinger_window = trial.suggest_int("bollinger_window", 5, 50)
+    bollinger_std = 2  # Fixed value for Bollinger Bands standard deviation
+    macd_slow_window = trial.suggest_int("macd_slow_window", 20, 40)
+    macd_fast_window = trial.suggest_int("macd_fast_window", 5, 20)
+    macd_sign_window = trial.suggest_int("macd_sign_window", 5, 20)
+    atr_window = trial.suggest_int("atr_window", 5, 20)
 
     technical_data = create_signals(data,
                                     rsi_window=rsi_window,
                                     rsi_lower_threshold=rsi_lower_threshold,
                                     bollinger_window=bollinger_window,
-                                    bollinger_std=2)
+                                    bollinger_std=bollinger_std,
+                                    macd_slow_window=macd_slow_window,
+                                    macd_fast_window=macd_fast_window,
+                                    macd_sign_window=macd_sign_window,
+                                    atr_window=atr_window)
 
     # Backtesting
     for i, row in technical_data.iterrows():
@@ -248,7 +269,3 @@ study.optimize(func=profit, n_trials=1)
 
 study.best_params
 
-<<<<<<< HEAD
->>>>>>> df61e95f3c28d942930fe20a066336f3dcd7993c
-=======
->>>>>>> 1ea1046794b8d9cb5b169b30e6cfe1a96d6918ca
