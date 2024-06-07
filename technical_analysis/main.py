@@ -31,6 +31,9 @@ for ax in axs:
 plt.show()
 
 technical_data["BUY_SIGNAL"] = (technical_data.RSI < 31)
+#technical_data["BUY_SIGNAL"] = (technical_data.MACD > 0)  # Example: buy signal when MACD is positive
+#technical_data["BUY_SIGNAL"] = (technical_data.Close < technical_data["Bollinger Low"])  # Example: buy signal when price is below the lower Bollinger band
+#technical_data["BUY_SIGNAL"] = (technical_data.ATR > technical_data.ATR.mean())  # Example: buy signal when ATR is above its mean
 
 ### BACKTESTING
 
@@ -99,7 +102,7 @@ plt.show()
 
 ## Short Selling
 # Señal de venta basada en el RSI
-technical_data["SELL_SIGNAL"] = (technical_data.RSI > 75) & (technical_data.RSI2 > 75)
+technical_data["SELL_SIGNAL"] = (technical_data.RSI > 75)
 
 capital = 1_000_000
 n_shares = 100
@@ -166,10 +169,6 @@ plt.show()
 ### Optimization
 
 import optuna
-
-import optuna
-
-
 def create_signals(data: pd.DataFrame, **kwargs):
     data = data.copy()
 
@@ -228,14 +227,22 @@ def profit(trial):
         # Close all positions that are above/under tp or sl
         active_pos_copy = active_positions.copy()
         for pos in active_pos_copy:
-            if row.Close < pos["stop_loss"]:
-                # LOSS
-                capital += row.Close * pos["n_shares"] * (1 - COM)
-                active_positions.remove(pos)
-            if row.Close > pos["take_profit"]:
-                # PROFIT
-                capital += row.Close * pos["n_shares"] * (1 - COM)
-                active_positions.remove(pos)
+            if pos["type"] == "LONG":
+                if row.Close < pos["stop_loss"]:
+                    # LOSS
+                    capital += row.Close * pos["n_shares"] * (1 - COM)
+                    active_positions.remove(pos)
+                if row.Close > pos["take_profit"]:
+                    # PROFIT
+                    capital += row.Close * pos["n_shares"] * (1 - COM)
+                    active_positions.remove(pos)
+            elif pos["type"] == "SHORT":
+                if row.Close > pos["stop_loss"]:
+                    capital += (pos["sold_at"] - row.Close) * pos["n_shares"] * (1 - COM)
+                    active_positions.remove(pos)
+                elif row.Close < pos["take_profit"]:
+                    capital += (pos["sold_at"] - row.Close) * pos["n_shares"] * (1 - COM)
+                    active_positions.remove(pos)
 
         # Check if trading signal is True
         if row.BUY_SIGNAL and len(active_positions) < max_active_operations:
@@ -249,23 +256,34 @@ def profit(trial):
                     "stop_loss": row.Close * (1 - stop_loss),
                     "take_profit": row.Close * (1 + take_profit)
                 })
+                # Check if short selling signal is True
+            if row.SELL_SIGNAL and len(active_positions) < max_active_operations:
+                if capital > row.Close * (1 + COM) * n_shares * 1.5:
+                    capital -= row.Close * (COM) * n_shares
+                    active_positions.append({
+                        "type": "SHORT",
+                        "sold_at": row.Close,
+                        "n_shares": n_shares,
+                        "stop_loss": row.Close * (1 + stop_loss),
+                        "take_profit": row.Close * (1 - take_profit)
+                    })
 
-        # Portfolio value through time
-        positions_value = len(active_positions) * n_shares * row.Close
-        portfolio_value.append(capital + positions_value)
+            # Portfolio value through time
+            positions_value = len(active_positions) * n_shares * row.Close
+            portfolio_value.append(capital + positions_value)
 
     # Close all positions that are above/under tp or sl
-    active_pos_copy = active_positions.copy()
-    for pos in active_pos_copy:
-        capital += row.Close * pos["n_shares"] * (1 - COM)
+    for pos in active_positions.copy():
+        if pos["type"] == "LONG":
+            capital += row.Close * pos["n_shares"] * (1 - COM)
+        elif pos["type"] == "SHORT":
+            capital += (pos["sold_at"] - row.Close) * pos["n_shares"] * (1 - COM)
         active_positions.remove(pos)
 
     portfolio_value.append(capital)
     return portfolio_value[-1]
 
 study = optuna.create_study(direction='maximize')
-
 study.optimize(func=profit, n_trials=1)
-
 study.best_params
 
